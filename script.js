@@ -10,6 +10,7 @@ if (!navigator.gpu) {
 
 const adapter = await navigator.gpu.requestAdapter();
 if (!adapter) {
+    document.querySelector("#not-supported").style.display = "flex";   
     throw new Error("No compatible GPU detected.");
 }
 
